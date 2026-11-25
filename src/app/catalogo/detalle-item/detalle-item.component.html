@@ -1,0 +1,12 @@
+<ActionBar title="Detalle del Elemento">
+  <NavigationButton text="Atrás" android.systemIcon="ic_menu_back" (tap)="volver()"></NavigationButton>
+</ActionBar>
+
+<StackLayout class="p-20" *ngIf="item">
+  <Image src="res://ic_catalogo_custom" width="64" height="64" horizontalAlignment="center" class="m-b-16"></Image>
+  <Label [text]="item.nombre" class="h2 text-center font-weight-bold"></Label>
+  <Label [text]="item.categoria" class="text-center text-muted m-t-4"></Label>
+  <Label [text]="'Precio: $' + item.precio + ' USD'" class="h3 text-center m-t-12"></Label>
+  <Label [text]="item.descripcion" textWrap="true" class="body m-t-16"></Label>
+  <Button text="Regresar al Catálogo" (tap)="volver()" class="-primary m-t-24"></Button>
+</StackLayout>
